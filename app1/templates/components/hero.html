@@ -1,0 +1,39 @@
+{% load static %}
+
+<section id="home" class="hero-section d-flex align-items-center">
+    <div class="container container-custom">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <div class="hero-content" data-aos="fade-up">
+                    <p class="hero-eyebrow"><span class="hero-status-dot"></span> Developer portfolio <span class="hero-location">Gujarat, India</span></p>
+
+                    <h1 class="hero-title">Kanji <span class="glow-text">Baraiya</span></h1>
+                    <h2 class="hero-role">Python &amp; Django Developer <span aria-hidden="true">|</span> Full-Stack Developer</h2>
+
+                    <p class="hero-intro">
+                        BCA graduate and MSc IT student building responsive web applications with Python, Django, PHP, and MySQL. I enjoy full-stack development and solving practical problems through backend engineering.
+                    </p>
+
+                    <div class="hero-tech-list" aria-label="Core technologies">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Responsive web development</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn hero-button hero-button-primary">View My Projects <span aria-hidden="true">→</span></a>
+                        <a href="{% static 'app1/pdf/Baraiya_Kanji.pdf' %}" class="btn hero-button hero-button-secondary" target="_blank" rel="noopener noreferrer">Download Resume <span aria-hidden="true">↓</span></a>
+                        <a href="#contact" class="hero-contact-link">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+                <div class="hero-portrait-wrap">
+                    <img src="{% static 'app1/img/me1.jpeg' %}" class="hero-portrait" alt="Kanji Baraiya" width="360" height="420" fetchpriority="high">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

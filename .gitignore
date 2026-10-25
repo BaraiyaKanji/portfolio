@@ -1,0 +1,49 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local databases and logs
+db.sqlite3
+db.sqlite3-journal
+*.sqlite3
+*.sqlite3-journal
+*.db
+*.log
+
+# Local IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+/update_resume.bat
+
+# Generated build, test, and collected static files
+build/
+dist/
+htmlcov/
+.coverage
+staticfiles/
+
+# Windows folder metadata
+desktop.ini
+
+# Exclude this resume PDF from GitHub
+app1/static/app1/pdf/Baraiya_Kanji.pdf
+
+# Windows folder metadata
+desktop.ini

@@ -1,0 +1,84 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar" aria-label="Main navigation">
+    <div class="container container-custom">
+
+        <a class="navbar-brand brand" href="{% url 'home' %}#home">
+            <span class="brand-badge" aria-hidden="true">KB</span>
+            <span class="brand-text">
+                <strong class="brand-name">Kanji Baraiya</strong>
+                <small class="brand-role">Python &amp; Django Developer</small>
+            </span>
+        </a>
+
+        <button class="navbar-toggler custom-nav-toggle border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+            <span class="toggle-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'home' %}#home" data-section-link>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'about' in request.path %}active{% endif %}" href="{% url 'home' %}#about" data-section-link>About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}#skills" data-section-link>Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}#projects" data-section-link>Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if 'contact' in request.path %}active{% endif %}" href="{% url 'contact' %}#contact" data-section-link>Contact</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a class="btn btn-sm rounded-pill px-3 nav-cta" href="{% static 'app1/pdf/Baraiya_Kanji.pdf' %}" target="_blank" rel="noopener noreferrer">Resume</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    (function() {
+        const navbar = document.querySelector(".custom-navbar");
+        const menu = document.getElementById("navbarNav");
+        const toggle = navbar.querySelector(".custom-nav-toggle");
+        let scrollTicking = false;
+
+        function updateNavbarScrollState() {
+            navbar.classList.toggle("nav-scrolled", window.scrollY > 20);
+            scrollTicking = false;
+        }
+
+        window.addEventListener("scroll", function() {
+            if (!scrollTicking) {
+                window.requestAnimationFrame(updateNavbarScrollState);
+                scrollTicking = true;
+            }
+        }, { passive: true });
+        updateNavbarScrollState();
+
+        function closeMenu() {
+            if (menu.classList.contains("show")) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            }
+        }
+
+        document.addEventListener("click", function(event) {
+            if (menu.classList.contains("show") && !navbar.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape" && menu.classList.contains("show")) {
+                closeMenu();
+                toggle.focus();
+            }
+        });
+    })();
+</script>

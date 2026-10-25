@@ -1,0 +1,111 @@
+{% load static %}
+
+<section id="contact" class="contact-section py-5 text-white">
+    <div class="container container-custom">
+        <header class="contact-heading text-center" data-aos="fade-down">
+            <p class="section-eyebrow">Get in touch</p>
+            <h2 class="section-heading">Contact Me</h2>
+            <p class="contact-intro">Have a role, project, or question in mind? Feel free to reach out.</p>
+        </header>
+
+        <div class="row g-4 g-lg-5 align-items-stretch">
+            <div class="col-lg-5" data-aos="fade-right">
+                <div class="contact-details">
+                    <h3>Let's connect</h3>
+                    <p class="contact-details-copy">I’m happy to hear from you. You can contact me directly or use the form.</p>
+
+                    <a class="contact-detail-link" href="mailto:kanjib808@gmail.com">
+                        <span class="contact-detail-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                        <span>
+                            <span class="contact-detail-label">Email</span>
+                            <span class="contact-detail-value">kanjib808@gmail.com</span>
+                        </span>
+                    </a>
+
+                    <a class="contact-detail-link" href="tel:+917859883156">
+                        <span class="contact-detail-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                        <span>
+                            <span class="contact-detail-label">Phone</span>
+                            <span class="contact-detail-value">+91 7859883156</span>
+                        </span>
+                    </a>
+
+                    <div class="contact-detail-link contact-location">
+                        <span class="contact-detail-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+                        <span>
+                            <span class="contact-detail-label">Location</span>
+                            <span class="contact-detail-value">Gujarat, India</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="contact-form">
+                    <h3>Send a message</h3>
+                    <p class="contact-form-copy">Fields marked required must be completed.</p>
+
+                    {% if messages %}
+                        <div class="contact-feedback-list" aria-live="polite" aria-atomic="true">
+                            {% for message in messages %}
+                                <p class="contact-feedback {% if message.tags %}contact-feedback-{{ message.tags }}{% endif %}" role="{% if message.tags == 'error' %}alert{% else %}status{% endif %}">
+                                    {{ message }}
+                                </p>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if form.errors %}
+                        <div class="contact-feedback contact-feedback-error" role="alert">
+                            Please correct the errors below.
+                        </div>
+                    {% endif %}
+
+                    <form method="post" action="{% url 'contact' %}" class="contact-form-fields" data-contact-form>
+                        {% csrf_token %}
+
+                        <div class="contact-form-group">
+                            <label for="{{ form.name.id_for_label }}">Name <span>(required)</span></label>
+                            {{ form.name }}{% if form.name.errors %}<div id="name-errors">{% for error in form.name.errors %}
+                                <p class="contact-field-error">{{ error }}</p>
+                            {% endfor %}</div>{% endif %}
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="{{ form.email.id_for_label }}">Email <span>(required)</span></label>
+                            {{ form.email }}{% if form.email.errors %}<div id="email-errors">{% for error in form.email.errors %}
+                                <p class="contact-field-error">{{ error }}</p>
+                            {% endfor %}</div>{% endif %}
+                        </div>
+
+                        <div class="contact-form-group">
+                            <label for="{{ form.message.id_for_label }}">Message <span>(required)</span></label>
+                            {{ form.message }}{% if form.message.errors %}<div id="message-errors">{% for error in form.message.errors %}
+                                <p class="contact-field-error">{{ error }}</p>
+                            {% endfor %}</div>{% endif %}
+                        </div>
+
+                        <button type="submit" class="btn btn-custom contact-submit">
+                            <span data-submit-label>Send Message</span>
+                            <span aria-hidden="true">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.querySelectorAll("[data-contact-form]").forEach(function(form) {
+        form.addEventListener("submit", function() {
+            const button = form.querySelector("button[type='submit']");
+            const label = button.querySelector("[data-submit-label]");
+            if (button.disabled) {
+                return;
+            }
+            button.disabled = true;
+            label.textContent = "Sending...";
+        });
+    });
+</script>

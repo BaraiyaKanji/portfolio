@@ -1,0 +1,225 @@
+{% load static %}
+
+<section id="about" class="about-section py-5 text-white">
+    <div class="container container-custom">
+        <div class="text-center mb-5" data-aos="fade-down">
+            <p class="section-eyebrow">A little about me</p>
+            <h2 class="section-heading">About Me</h2>
+        </div>
+
+        <div class="row align-items-center g-4 g-lg-5 mb-5">
+            <div class="col-12 about-content" data-aos="fade-left">
+                <h3 class="intro-title">Hello, I'm <span class="name-highlight">Kanji Baraiya</span></h3>
+                <p class="role-text">BCA Graduate <span aria-hidden="true">·</span> MSc IT Student</p>
+
+                <p class="about-desc">
+                    I am interested in Python/Django development, full-stack development, and backend engineering. I enjoy building useful web applications with clear, responsive interfaces.
+                </p>
+
+                <div class="about-buttons">
+                    <a href="{% url 'contact' %}" class="btn-main">Contact Me</a>
+                    <a href="{% static 'app1/pdf/Baraiya_Kanji.pdf' %}" class="btn-outline" target="_blank" rel="noopener noreferrer">View Resume</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="career-grid">
+            <section class="career-section" aria-labelledby="experience-heading" data-aos="fade-up">
+                <p class="section-eyebrow">Professional experience</p>
+                <h2 id="experience-heading" class="career-heading">Experience</h2>
+
+                <article class="career-card">
+                    <div class="career-card-header">
+                        <div>
+                            <h3>PHP Intern</h3>
+                            <p class="career-organization">ITHub Software Company <span>· Gujarat</span></p>
+                        </div>
+                        <span class="career-period">2025 <span>· 6 months</span></span>
+                    </div>
+                    <ul class="career-details">
+                        <li>Worked on website development and digital marketing tasks using PHP, MySQL, HTML5, CSS, and Bootstrap.</li>
+                        <li>Contributed to live website features and gained practical experience in server-side development and debugging.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="career-section" aria-labelledby="education-heading" data-aos="fade-up" data-aos-delay="100">
+                <p class="section-eyebrow">Academic background</p>
+                <h2 id="education-heading" class="career-heading">Education</h2>
+
+                <article class="career-card education-card">
+                    <div class="career-card-header">
+                        <div>
+                            <h3>Master of Science (Information Technology)</h3>
+                            <p class="career-organization">Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) <span>· Gujarat</span></p>
+                        </div>
+                        <span class="career-period">2025–Present</span>
+                    </div>
+                </article>
+
+                <article class="career-card education-card">
+                    <div class="career-card-header">
+                        <div>
+                            <h3>Bachelor of Computer Applications (BCA)</h3>
+                            <p class="career-organization">Maharaja Krishnakumarsinhji Bhavnagar University (MKBU) <span>· Gujarat</span></p>
+                        </div>
+                        <span class="career-period">2021–2024</span>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <div id="skills" class="text-center mb-4" data-aos="fade-up">
+            <p class="section-eyebrow">What I work with</p>
+            <h2 class="skills-title">Technical Skills</h2>
+        </div>
+
+        <div class="skills-container" data-aos="zoom-in">
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-code skill-icon" aria-hidden="true"></i> Programming Languages</h3>
+                <div class="skill-tags">
+                    <span>Python</span>
+                    <span>PHP</span>
+                    <span>JavaScript</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-server skill-icon" aria-hidden="true"></i> Backend Development</h3>
+                <div class="skill-tags">
+                    <span>Django</span>
+                    <span>PHP</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-laptop-code skill-icon" aria-hidden="true"></i> Frontend Development</h3>
+                <div class="skill-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-database skill-icon" aria-hidden="true"></i> Databases</h3>
+                <div class="skill-tags">
+                    <span>MySQL</span>
+                    <span>SQLite</span>
+                    <span>Firebase</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-wand-magic-sparkles skill-icon" aria-hidden="true"></i> AI Tools</h3>
+                <div class="skill-tags">
+                    <span>ChatGPT</span>
+                    <span>Claude</span>
+                    <span>Google AI Studio</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-toolbox skill-icon" aria-hidden="true"></i> Development Tools</h3>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>VS Code</span>
+                    <span>Cloudinary</span>
+                </div>
+            </article>
+            <article class="skill-card">
+                <h3><i class="fa-solid fa-diagram-project skill-icon" aria-hidden="true"></i> Core Concepts</h3>
+                <div class="skill-tags">
+                    <span>OOP</span>
+                    <span>CRUD Operations</span>
+                    <span>Role-Based Access</span>
+                    <span>Admin Dashboards</span>
+                </div>
+            </article>
+        </div>
+
+        <div id="projects" class="text-center mt-5 mb-4" data-aos="fade-up">
+            <p class="section-eyebrow">Selected work</p>
+            <h2 class="project-title">My Projects</h2>
+        </div>
+
+        <div class="projects-container">
+            <article class="project-card" data-aos="fade-up">
+                <div class="project-card-top">
+                    <span class="project-number" aria-hidden="true">01</span>
+                    <span class="project-type">Real estate platform</span>
+                </div>
+                <h3>Apna Nivas</h3>
+                <p class="project-description">A real estate platform connecting property buyers directly with property owners, without brokers.</p>
+                <h4>Key features</h4>
+                <ul class="project-features">
+                    <li>Role-based buyer and seller accounts</li>
+                    <li>Seller dashboard for listed and sold properties</li>
+                    <li>Admin approval before properties are published</li>
+                </ul>
+                <div class="project-tags" aria-label="Technologies">
+                    <span>Firebase</span>
+                    <span>Cloudinary</span>
+                    <span>Google AI Studio</span>
+                    <span>AI coding tools</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card-top">
+                    <span class="project-number" aria-hidden="true">02</span>
+                    <span class="project-type">CRUD application</span>
+                </div>
+                <h3>Blog Website</h3>
+                <p class="project-description">A PHP and MySQL blog platform for registered users to read and upload blog posts.</p>
+                <h4>Key features</h4>
+                <ul class="project-features">
+                    <li>User signup and login</li>
+                    <li>Registered users can read and upload blogs</li>
+                    <li>Admin interface to view, edit, and delete submitted blogs</li>
+                </ul>
+                <div class="project-tags" aria-label="Technologies">
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Bootstrap</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card-top">
+                    <span class="project-number" aria-hidden="true">03</span>
+                    <span class="project-type">Developer portfolio</span>
+                </div>
+                <h3>Portfolio Website</h3>
+                <p class="project-description">My responsive developer portfolio, built with Django and SQLite to present my work and profile.</p>
+                <h4>Key features</h4>
+                <ul class="project-features">
+                    <li>Project showcase</li>
+                    <li>Database-backed contact message handling</li>
+                    <li>Responsive layout</li>
+                </ul>
+                <div class="project-tags" aria-label="Technologies">
+                    <span>Python</span>
+                    <span>Django</span>
+                    <span>SQLite</span>
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                </div>
+            </article>
+
+            <article class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card-top">
+                    <span class="project-number" aria-hidden="true">04</span>
+                    <span class="project-type">Business project concept</span>
+                </div>
+                <h3>Garlic-Brothers</h3>
+                <p class="project-description">A business-focused project exploring raw garlic sourcing, peeled garlic preparation for customers, and potential sales through local customers and online marketing.</p>
+                <h4>Key areas</h4>
+                <ul class="project-features">
+                    <li>Garlic sourcing and peeled garlic product planning</li>
+                    <li>Target customers and pricing and cost planning</li>
+                    <li>Packaging and marketing research</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
