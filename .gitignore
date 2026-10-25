@@ -42,8 +42,5 @@ staticfiles/
 # Windows folder metadata
 desktop.ini
 
-# Exclude this resume PDF from GitHub
-app1/static/app1/pdf/Baraiya_Kanji.pdf
-
 # Windows folder metadata
 desktop.ini
