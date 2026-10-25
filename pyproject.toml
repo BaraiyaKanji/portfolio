@@ -1,0 +1,5 @@
+[tool.vercel]
+entrypoint = "portfolio2.wsgi:application"
+
+[tool.vercel.scripts]
+build = "python manage.py collectstatic --noinput"
