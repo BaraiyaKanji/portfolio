@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,11 @@
     <meta name="theme-color" content="#07111f">
     <title>{% block title %}Kanji Baraiya | Python & Django Developer{% endblock %}</title>
 
-    {% load static %}
+    <link rel="icon" href="{% static 'app1/img/favicon/favicon.ico' %}" sizes="any">
+    <link rel="icon" type="image/svg+xml" href="{% static 'app1/img/favicon/favicon.svg' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'app1/img/favicon/favicon-32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'app1/img/favicon/favicon-16.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'app1/img/favicon/apple-touch-icon.png' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
